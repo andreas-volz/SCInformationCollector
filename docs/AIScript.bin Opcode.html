@@ -1,0 +1,1191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.4.7.2 (Linux)"/>
+	<meta name="author" content="Andreas Volz"/>
+	<meta name="created" content="2021-11-14T21:41:03.744265142"/>
+	<meta name="changedby" content="Andreas Volz"/>
+	<meta name="changed" content="2021-11-14T21:43:07.988656377"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		p { margin-bottom: 0.25cm; line-height: 115%; background: transparent }
+		h3 { margin-top: 0.25cm; margin-bottom: 0.21cm; background: transparent; page-break-after: avoid }
+		h3.western { font-family: "Liberation Serif", serif; font-size: 14pt; font-weight: bold }
+		h3.cjk { font-family: "Noto Serif CJK SC"; font-size: 14pt; font-weight: bold }
+		h3.ctl { font-family: "Lohit Devanagari"; font-size: 14pt; font-weight: bold }
+		a:link { color: #000080; so-language: zxx; text-decoration: underline }
+	</style>
+</head>
+<body lang="de-DE" link="#000080" vlink="#800000" dir="ltr"><h3 class="western">
+AIScript.bin Opcode 
+</h3>
+<p><br/>
+<br/>
+
+</p>
+<div id="article" dir="ltr"><p><br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x00 - goto</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Jump to %1(block) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x01 - notowns_jump</p>
+	<p><br/>
+<b>Description:</b> <br/>
+If computer doesn't have a
+	%1(unit), jump to %2(block) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x02 - wait</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Wait for %1(word) tenths of
+	second in normal game speed <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x03 - start_town</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Starts the AI Script for town
+	management <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x04 - start_areatown</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Starts the AI Script for area
+	town management <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x05 - expand</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Run code at %2(block) for
+	expansion number %1(byte) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x06 - build</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Build %2(building) until it
+	commands %1(byte) of them, at priority %3(byte) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x07 - upgrade</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Research upgrade %2(upgrade) up
+	to level %1(byte), at priority %3(byte) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x08 - tech</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Research technology
+	%1(technology), at priority %2(byte) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x09 - wait_build</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Wait until computer commands
+	%1(byte) %2(building) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x0A - wait_buildstart</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Wait until construction of
+	%1(byte) %2(unit) has started <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x0B - attack_clear</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Clear the attack data <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x0C - attack_add</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Add %1(byte) %2(military) to the
+	current attacking party <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x0D - attack_prepare</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Prepare the attack <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x0E - attack_do</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Attack the enemy with the current
+	attacking party <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x0F - wait_secure</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Points to wait_bunkers with
+	alternate params <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x10 - capt_expand</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The use of this command is
+	unknown <br/>
+Takes no parameter <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x11 - build_bunkers</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Memory mentions bunkers <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x12 - wait_bunkers</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The definition of this command is
+	unknown <br/>
+It is never used in Blizzard scripts <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x13 - defensebuild_gg</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Build %1(byte) %2(military) to
+	defend against enemy attacking ground units, when ground units are
+	attacked <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x14 - defensebuild_ag</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Build %1(byte) %2(military) to
+	defend against enemy attacking air units, when ground units are
+	attacked <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x15 - defensebuild_ga</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Build %1(byte) %2(military) to
+	defend against enemy attacking ground units, when air units are
+	attacked <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x16 - defensebuild_aa</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Build %1(byte) %2(military) to
+	defend against enemy attacking air units, when air units are
+	attacked <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x17 - defenseuse_gg</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Use %1(byte) %2(military) to
+	defend against enemy attacking ground units, when ground units are
+	attacked <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x18 - defenseuse_ag</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Use %1(byte) %2(military) to
+	defend against enemy attacking air units, when ground units are
+	attacked <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x19 - defenseuse_ga</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Use %1(byte) %2(military) to
+	defend against enemy attacking ground units, when air units are
+	attacked <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x1A - defenseuse_aa</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Use %1(byte) %2(military) to
+	defend against enemy attacking air units, when air units are
+	attacked <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x1B - defenseclear_gg</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Clear defense against enemy
+	attacking ground units, when ground units are attacked <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x1C - defenseclear_ag</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Clear defense against enemy
+	attacking air units, when ground units are attacked <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x1D - defenseclear_ga</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Clear defense against enemy
+	attacking ground units, when air units are attacked <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x1E - defenseclear_aa</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Clear defense against enemy
+	attacking air units, when air units are attacked <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x1F - send_suicide</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Send all units to suicide mission
+	<br/>
+%1(byte) determines which type: 0 = Strategic suicide; 1 =
+	Random suicide <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x20 - player_enemy</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Make selected player enemy <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x21 - player_ally</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Make selected player ally <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x22 - default_min</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The use of this command is
+	unknown <br/>
+Takes %1(byte) as parameter <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x23 - defaultbuild_off</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The use of this command is
+	unknown <br/>
+Takes no parameter <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x24 - stop</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Stop script code execution <br/>
+Often
+	used to close script blocks called simultaneously <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x25 - switch_rescue</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Switch computer to rescuable
+	passive mode <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x26 - move_dt</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Move Dark Templars to selected
+	location <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x27 - debug</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Show debug string %2(string) and
+	continue in %1(block) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x28 - fatal_error</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Causes a fatal AI script error
+	<br/>
+&quot;Illegal AI script executed.&quot; <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x29 - enter_bunker</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Enter Bunker in selected location
+	<br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x2A - value_area</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Value this area higher <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x2B - transports_off</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Computer will not manage/build
+	transports on its own <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x2C - check_transports</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Informs computer to use
+	transports up to the defined Max# <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x2D - nuke_rate</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Builds nukes every %1(byte)
+	minutes <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x2E - max_force</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The use of this command is
+	unknown <br/>
+Takes %1(word) as parameter <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x2F - clear_combatdata</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Clear previous combat data <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x30 - random_jump</p>
+	<p><br/>
+<b>Description:</b> <br/>
+There is %1(byte) chances out of
+	256 to jump to %2(block) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x31 - time_jump</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Jumps to %2(block) if %1(byte)
+	normal game minutes have passed in the game <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x32 - farms_notiming</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Build necessary farms only when
+	it hits the maximum supply available <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x33 - farms_timing</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Build necessary farms with a
+	correct timing, so nothing is paused by a maximum supply limit hit
+	<br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x34 - build_turrets</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Memory mentions Missile Turrets
+	<br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x35 - wait_turrets</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Points to wait_bunkers with
+	alternate params <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x36 - default_build</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The definition of this command is
+	unknown <br/>
+It is never used in Blizzard scripts <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x37 - harass_factor</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The definition of this command is
+	unknown <br/>
+It is never used in Blizzard scripts <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x38 - start_campaign</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Starts the AI Script for Campaign
+	<br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x39 - race_jump</p>
+	<p><br/>
+<b>Description:</b> <br/>
+According to the nearest enemy
+	race, jump in %1(block) if it is Terran, %2(block) if Zerg or
+	%3(block) if Protoss <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x3A - region_size</p>
+	<p><br/>
+<b>Description:</b> <br/>
+If enemy unit is within %1 (byte)
+	(unknown measure), jump to %2 (block) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x3B - get_oldpeons</p>
+	<p><br/>
+<b>Description:</b> <br/>
+This command takes %1(byte)
+	number of workers from the main to move to the expansion <br/>
+Should
+	be used after the expansion is completed <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x3C - groundmap_jump</p>
+	<p><br/>
+<b>Description:</b> <br/>
+If it is a ground map(in other
+	words, if the enemy is reachable), jump to %1(block) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x3D - place_guard</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Place %2(byte) guards(guardindex,
+	0+) using %1(unit) to guard town <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x3E - wait_force</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Wait until computer commands
+	%1(byte) %2(military) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x3F - guard_resources</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Send units of type %1(military)
+	to guard as many resources spots as possible(1 per spot) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x40 - call</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Call %1(block) as a sub-routine
+	<br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x41 - return</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Return to the flow point of the
+	call command <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x42 - eval‎_harass</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The definition of this command is
+	unknown <br/>
+It is never used in Blizzard scripts <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x43 - creep</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Place towers using %1(byte)
+	placement scheme <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x44 - panic</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Go to %1(block) when attacked <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x45 - player_need</p>
+	<p><br/>
+<b>Description:</b> <br/>
+If player does not have %1(byte)
+	%2(building), build it, otherwise ignore this op <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x46 - do_morph</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The use of this command is
+	unknown <br/>
+Takes no parameters <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x47 - wait_upgrades</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The definition of this command is
+	unknown <br/>
+It is never used in Blizzard scripts <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x48 - multirun</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Run simultaneously code at
+	%1(block) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x49 - rush</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Jump to %2(block) if predifined
+	condition scheme %1(byte) is met <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x4A - scout_with</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Takes %1(military) as parameter
+	<br/>
+Command is unused. <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x4B - define_max</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Define maximum number of %2(unit)
+	to %1(byte) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x4C - train</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Train %2(military) until it
+	commands %1(byte) of them <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x4D - target_expansion</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The use of this command is
+	unknown <br/>
+Takes no parameter <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x4E - wait_train</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Wait until computer commands
+	%1(byte) %2(military) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x4F - set_attacks</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The use of this command is
+	unknown <br/>
+Takes %1(byte) as parameter <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x50 - set_gencmd</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Set generic command target <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x51 - make_patrol</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Make these units patrol in
+	selected location <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x52 - give_money</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Give 2000 ore and gas if owned
+	resources are low <br/>
+Should only be used in campaign scripts <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x53 - prep_down</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Something to do with Siege
+	tanks(Tank and Siege modes)? <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x54 - resources_jump</p>
+	<p><br/>
+<b>Description:</b> <br/>
+If computer has at least %1(word)
+	minerals and %2(word) gas then jump in %3(block) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x55 - enter_transport</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Enter in nearest Transport in
+	selected location <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x56 - exit_transport</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Exit Transport in selected
+	location <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x57 - sharedvision_on</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Enable Shared vision for selected
+	player <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x58 - sharedvision_off</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Disable Shared Vision for
+	selected player <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x59 - nuke_location</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Nuke at selected location <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x5A - harass_location</p>
+	<p><br/>
+<b>Description:</b> <br/>
+AI Harass at selected location <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x5B - implode</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The definition of this command is
+	unknown <br/>
+It is never used in Blizzard scripts <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x5C - guard_all</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The use of this command is
+	unknown <br/>
+Takes no parameters <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x5D - enemyowns_jump</p>
+	<p><br/>
+<b>Description:</b> <br/>
+If enemy has a %1(unit), jump to
+	%2(block) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x5E - enemyresources_jump</p>
+	<p><br/>
+<b>Description:</b> <br/>
+If enemy has at least %1(word)
+	minerals and %2(word) gas then jump in %3(block) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x5F - if_dif</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The definition of this command is
+	unknown <br/>
+It is never used in Blizzard scripts <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x60 - easy_attack</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The definition of this command is
+	unknown <br/>
+It is never used in Blizzard scripts <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x61 - kill_thread</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Kill the current thread <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x62 - killable</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Allows the current thread to be
+	killed by another one <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x63 - wait_finishattack</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Wait until attacking party has
+	finished to attack <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x64 - quick_attack</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Seems to be a buffed up version
+	of Attack_Prepare <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x65 - junkyard_dog</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Junkyard Dog at selected location
+	<br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x66 - fake_nuke</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The use of this command is
+	unknown <br/>
+Takes no parameters <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x67 - disruption_web</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Disruption Web at selected
+	location <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x68 - recall_location</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Recall at selected location <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x69 - set_randomseed</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Set random seed to %1(word)
+	%2(word) (The two words are transformed in a 32-bit integer) <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x6A - if_owned</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The use of this command is
+	unknown <br/>
+Takes %1(unit) and %2(block) as parameters <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x6B - create_nuke</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Create a nuke <br/>
+Should only
+	be used in campaign scripts <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x6C - create_unit</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Create %1(unit) at map position
+	(x,y) where x = %2(word) and y = %3(word) <br/>
+Should only be used
+	in campaign scripts <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x6D - nuke_pos</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Launch a nuke at map position
+	(x,y) where x = %1(word) and y = %2(word) <br/>
+Should only be used
+	in campaign scripts <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x6E - help_iftrouble</p>
+	<p><br/>
+<b>Description:</b> <br/>
+Ask allies help if computer is
+	ever in trouble <br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x6F - allies_watch</p>
+	<p><br/>
+<b>Description:</b> <br/>
+The use of this command is
+	unknown <br/>
+Takes %1(byte) and %2(block) as parameters <br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm">0x70 - try_townpoint</p>
+	<p style="margin-bottom: 0cm"><br/>
+<b>Description:</b> <br/>
+The
+	use of this command is unknown <br/>
+Takes %1(byte) and %2(block) as
+	parameters 
+	</p>
+</div>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+</body>
+</html>

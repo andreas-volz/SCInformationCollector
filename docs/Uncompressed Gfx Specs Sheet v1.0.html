@@ -1,0 +1,585 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.4.7.2 (Linux)"/>
+	<meta name="author" content="Andreas Volz"/>
+	<meta name="created" content="2021-11-14T21:31:10.294497645"/>
+	<meta name="changedby" content="Andreas Volz"/>
+	<meta name="changed" content="2021-11-14T21:31:51.648366534"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		p { margin-bottom: 0.25cm; line-height: 115%; background: transparent }
+		h1 { margin-bottom: 0.21cm; background: transparent; page-break-after: avoid }
+		h1.western { font-family: "Liberation Serif", serif; font-size: 24pt; font-weight: bold }
+		h1.cjk { font-family: "Noto Serif CJK SC"; font-size: 24pt; font-weight: bold }
+		h1.ctl { font-family: "Lohit Devanagari"; font-size: 24pt; font-weight: bold }
+		td p { background: transparent }
+		a:link { color: #000080; so-language: zxx; text-decoration: underline }
+	</style>
+</head>
+<body lang="de-DE" link="#000080" vlink="#800000" dir="ltr"><h1 class="western">
+<u>Uncompressed Gfx Specs Sheet v1.0</u></h1>
+<p><b>Written by Klint</b><br/>
+- All offsets are Decimal, Big Endian
+and INCLUSIVE unless otherwise specified.</p>
+<table cellpadding="5" cellspacing="0">
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.14cm"><p>
+			<a href="http://web.archive.org/web/19991111041444/http://camelot.warzone.com/formats/GFXForm.htm#overview">Gfx
+			Overview</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/19991111041444/http://camelot.warzone.com/formats/GFXForm.htm#frameover">Frame
+			Overview</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/19991111041444/http://camelot.warzone.com/formats/GFXForm.htm#frame">Frame
+			Data</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/19991111041444/http://camelot.warzone.com/formats/GFXForm.htm#rowdata">Row
+			Data</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/19991111041444/http://camelot.warzone.com/formats/GFXForm.htm#middle">Middle
+			Part of Row Data</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/19991111041444/http://camelot.warzone.com/formats/GFXForm.htm#example">Example
+			of Row Data</a></p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.06cm"><p>
+			<u><b>Section</b></u></p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.06cm"><p>
+			<u><b>Variable type</b></u></p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.06cm"><p>
+			<u><b>Comments</b></u></p>
+		</td>
+		<td valign="top" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Gfx Overview</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Number of Frames</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Integer</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Gfx are animations and each frame is a picture from that
+			animation, but I'm sure you knew that :)</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Max Width</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Integer</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			If the frames were all to be laid on top of each other, they would
+			all fit inside the rectangle with dimensions of the max width and
+			the max height, or the &quot;max; size rectangle.&quot;</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Max Height</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Integer</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			&nbsp;</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Frame Overview
+			(repeated as many times as there are frames)</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			X-Adjust Value</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Byte</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			This is the number added to the &quot;x; coordinate&quot; of every
+			pixel in the frame to get that pixel's position in the &quot;max;
+			size rectangle.&quot;</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Y-Adjust Value</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Byte</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			This is the number added to the &quot;y; coordinate&quot; of every
+			pixel in the frame to get that pixel's position in the &quot;max;
+			size rectangle.&quot;</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Width</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Byte</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			This is the width of the frame.</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Height</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Byte</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			This is the height of the frame.</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Start of Frame</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Long</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			The offset number of the start of the frame data</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Frame Data (once per
+			frame)</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Offsets of the beginnings of horizontal Rows (repeated for every
+			horizontal row 
+			</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Integer</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			The integer + [Offset # of first byte of the frame the row is in]
+			= Offset # of beginning of row</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Row Data</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			&nbsp;</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Expanded Below</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+</table>
+<hr/>
+
+<hr/>
+
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Row Data (example at
+			bottom)</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			First Byte of Row Data</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Byte</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			The byte minus 128 = number of transparent pixels at the beginning
+			of the Row</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Middle Part of Row Data</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			&nbsp;</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Expanded Below</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Last Byte of Row Data</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Byte</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Last Byte of Row minus 128 = number of transparent pixels at end
+			of the row</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+</table>
+<hr/>
+
+<hr/>
+
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Middle Part of Row
+			Data</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Color Number Label</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Byte</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Tells the number of bytes directly after it that are each a pixel
+			and a color number in the palette</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Single Pixels</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			One byte each</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Each byte is the number of the color in the palette that makes up
+			it's pixel</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Repeating Colors in a Row</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			2 Bytes</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			(Optional) Takes two bytes. 1<sup>st</sup> byte minus 64 equals
+			the number of times the color repeats. 2<sup>nd</sup> byte is the
+			color number in the palette. &quot;Color; Number Labels&quot;
+			cannot point to them, and after the two bytes, there must be
+			another color number label for any single colored pixels after
+			them (if any exist)</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Transparent Pixel</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Byte</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			(Optional) The color number 129, but it's treated like a repeating
+			color, in that it &quot;ColorNumber; Labels&quot; cannot include
+			them, and there must be a new &quot;Color; Number Label&quot; for
+			any single colored pixels after it.</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+</table>
+<hr/>
+
+<hr/>
+
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Example of Row Data</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Actual Numbers</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Name</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Explanation</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			133</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			First Byte of Row Data</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			133 minus 128 equals 5, so there are 5 transparent pixels before
+			any other pixels.</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			3</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Color Number Label</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			The number is 3, so the next 3 numbers are the first three pixels
+			of the row and the numbers can be directly translated into colors.</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			101</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Single Pixel</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			The first pixel in the row is the 101<sup>st</sup> color in the
+			palette.</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			104</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Single Pixel</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			The second pixel in the row is the 104<sup>th</sup> color in the
+			palette.</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			110</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Single Pixel</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			The third pixel in the row is the 110<sup>th</sup> color in the
+			palette.</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			70</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			First Byte of &quot;Repeating; Pixels in a Row&quot;</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			70 minus 64 = 6. So the next color repeats 6 times.</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			111</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Second Byte of &quot;Repeating; Pixels in a Row&quot;</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			The 4<sup>th</sup> through the 9<sup>th</sup> pixels in the row
+			are the 111<sup>th</sup> color in the palette.</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			3</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Color Number Label</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			The number is 3, so the next 3 numbers are the 10<sup>th</sup>
+			through 12<sup>th</sup> pixels of the row and the numbers can be
+			directly translated into colors.</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			110</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Single Pixel</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			The 10<sup>th</sup> pixel in the row is the 110<sup>th</sup> color
+			in the palette.</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			104</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Single Pixel</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			The 11<sup>th</sup> pixel in the row is the 104<sup>th</sup> color
+			in the palette.</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			101</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Single Pixel</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			The 12<sup>th</sup> pixel in the row is the 101<sup>st</sup> color
+			in the palette.</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			129</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Transparent Pixel</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Since the three pixels that the &quot;Color; Number Label&quot;
+			showed have already been written, this is interpreted as a
+			transparent pixel, instead of the 129<sup>th</sup> color in the
+			palette. So the 13<sup>th</sup> pixel in the row is transparent.</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			129</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Transparent Pixel</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			The 14<sup>th</sup> pixel in the row is transparent.</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Color Number Label</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			The next byte is the color of the next pixel</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			101</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Single Pixel</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			The 15<sup>th</sup> pixel in the row is the 101<sup>st</sup> color
+			in the palette. 
+			</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			133</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Last Byte of Row Data</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			133 minus 128 equals 5, so there are 5 transparent pixels after
+			the 15<sup>th</sup> pixel.</p>
+		</td>
+		<td valign="top" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+</table>
+<hr/>
+
+<p>Copyright (©) Camelot Systems, Inc. 1998.</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,1286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.4.7.2 (Linux)"/>
+	<meta name="author" content="Andreas Volz"/>
+	<meta name="created" content="2021-11-14T21:40:56.952788789"/>
+	<meta name="changedby" content="Andreas Volz"/>
+	<meta name="changed" content="2021-11-14T21:44:53.286187073"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		p { margin-bottom: 0.25cm; line-height: 115%; background: transparent }
+		h3 { margin-top: 0.25cm; margin-bottom: 0.21cm; background: transparent; page-break-after: avoid }
+		h3.western { font-family: "Liberation Serif", serif; font-size: 14pt; font-weight: bold }
+		h3.cjk { font-family: "Noto Serif CJK SC"; font-size: 14pt; font-weight: bold }
+		h3.ctl { font-family: "Lohit Devanagari"; font-size: 14pt; font-weight: bold }
+		a:link { color: #000080; so-language: zxx; text-decoration: underline }
+	</style>
+</head>
+<body lang="de-DE" link="#000080" vlink="#800000" dir="ltr"><h3 class="western">
+Replay/Packet Opcode 
+</h3>
+<p><br/>
+<br/>
+
+</p>
+<div id="article" dir="ltr"><p style="margin-bottom: 0cm">Notes</p>
+	<p><br/>
+This list has been merged due to the similarity between
+	Replay data and Packet data. <br/>
+<br/>
+The command opcode is not
+	stored in the Command ID of the packet, but rather in the data,
+	where many commands may stack. <br/>
+<br/>
+Entries in standard text
+	indicate that the opcode is Command Class 2. <br/>
+Entries in <font color="#ff55ff">purple
+	text</font> indicate that the opcode is Command Class 1. <br/>
+<br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm"><a name="wiki_2"></a>Command Opcodes</p>
+	<p><br/>
+<br/>
+----------------------------------------------------
+	<br/>
+<b>0x5B - </b>Deselect 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (#of units) <br/>
+unsigned short (Unit
+		ID[memory]) 
+		</p>
+	</ul>
+	<p><br/>
+---------------------------------------------------- <br/>
+<b>0x5A
+	- </b>Merge Dark Archon 
+	</p>
+	<ul>
+		<p><br/>
+No params. 
+		</p>
+	</ul>
+	<p><br/>
+0x4231E0 <br/>
+Referenced in: 0x4BF9D0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x59
+	- </b>??? 
+	</p>
+	<ul>
+		<p><br/>
+Params unknown 
+		</p>
+	</ul>
+	<p><br/>
+---------------------------------------------------- <br/>
+<b>0x58
+	- </b>Minimap Ping 
+	</p>
+	<ul>
+		<p><br/>
+signed short (x) <br/>
+signed short(y) 
+		</p>
+	</ul>
+	<p><br/>
+0x4A5060 <br/>
+Referenced in: 4BF8D0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x57
+	- </b>Leave Game 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (1=Player Quit, 6=Player Dropped) 
+		</p>
+	</ul>
+	<p><br/>
+---------------------------------------------------- <br/>
+<b>0x56
+	- </b>Change Replay Speed 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (0=Play, 1=Pause) <br/>
+unsigned long (Game
+		Speed) <br/>
+unsigned long (Speed Multiplier) 
+		</p>
+	</ul>
+	<p><br/>
+Play/Pause Replay: 0x4DEEB0 <br/>
+Slow Down Replay:
+	0x4DEEF0 <br/>
+Speed Up Replay: 0x4DEE50 <br/>
+Referenced in:
+	0x4BF900 <br/>
+----------------------------------------------------
+	<br/>
+<b>0x55 - </b>Set Latency 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (latency setting) 
+		</p>
+	</ul>
+	<p><br/>
+Referenced in: 0x46D440 <br/>
+Referenced in: 0x485A00 <br/>
+Used
+	in: 0x4E85F0 <br/>
+----------------------------------------------------
+	<br/>
+<b>0x54 - </b>Mission Briefing Start 
+	</p>
+	<ul>
+		<p><br/>
+No Parameters 
+		</p>
+	</ul>
+	<p><br/>
+0x485990
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x53
+	- </b><br/>
+<b>0x52 - </b><br/>
+<b>0x51 -
+	</b><br/>
+---------------------------------------------------- <br/>
+<font color="#ff55ff"><b>0x50
+	- </b></font><font color="#ff55ff">Unknown </font>
+	</p>
+	<ul>
+		<p><font color="#ff55ff"><br/>
+No Parameters. </font>
+		</p>
+	</ul>
+	<p><br/>
+<font color="#000000">----------------------------------------------------
+	<br/>
+</font><font color="#ff55ff"><b>0x4F - </b></font><font color="#ff55ff">Map
+	data transfer </font>
+	</p>
+	<ul>
+		<p style="margin-bottom: 0cm"><font color="#ff55ff"><br/>
+unsigned
+		short (packet size [after value]) <br/>
+unsigned short (transfer
+		ID) </font>
+		</p>
+		<ul>
+			<p style="margin-bottom: 0cm"><font color="#ff55ff"><br/>
+<b>ID 0
+			- Unknown</b> <br/>
+6 bytes <br/>
+<b>ID 1 - File Name</b>
+			<br/>
+unsigned long (file size?) <br/>
+unsigned long (file hash?)
+			<br/>
+string (file name) <br/>
+<b>ID 4 - Transfer data</b>
+			<br/>
+unsigned char (unknown) <br/>
+unsigned long (file offset ?)
+			<br/>
+unsigned short (block size [after value]) <br/>
+void
+			(..data..) <br/>
+<b>ID 5 - Request data</b> <br/>
+unsigned char
+			(unknown) <br/>
+unsigned long (file offset ?) </font>
+			</p>
+		</ul>
+		<p></p>
+	</ul>
+	<p><br/>
+<font color="#000000">----------------------------------------------------
+	<br/>
+</font><font color="#ff55ff"><b>0x4E - </b></font><font color="#ff55ff">Ban
+	Player </font>
+	</p>
+	<ul>
+		<p><font color="#ff55ff"><br/>
+unsigned char (Player ID) </font>
+		</p>
+	</ul>
+	<p><br/>
+<font color="#000000">----------------------------------------------------
+	<br/>
+</font><font color="#000000"><b>0x4D -
+	</b></font><font color="#000000"><br/>
+<br/>
+----------------------------------------------------
+	<br/>
+</font><font color="#ff55ff"><b>0x4C - </b></font><font color="#ff55ff">Lobby
+	Chat </font>
+	</p>
+	<ul>
+		<p><font color="#ff55ff"><br/>
+string (message) </font>
+		</p>
+	</ul>
+	<p><br/>
+<font color="#000000">----------------------------------------------------
+	<br/>
+</font><font color="#ff55ff"><b>0x4B - </b></font><font color="#ff55ff">Force
+	Name Transfer </font>
+	</p>
+	<ul>
+		<p><font color="#ff55ff"><br/>
+120 bytes - undefined </font>
+		</p>
+	</ul>
+	<p><br/>
+<font color="#000000">----------------------------------------------------
+	<br/>
+</font><font color="#ff55ff"><b>0x4A - </b></font><font color="#ff55ff">Player/Force
+	Data Transfer </font>
+	</p>
+	<ul>
+		<p><font color="#ff55ff"><br/>
+unsigned short (Game Speed ?)
+		<br/>
+unsigned short (unknown) <br/>
+unsigned short (unknown)
+		<br/>
+<br/>
+unsigned char (Player 1 Controller) // not accurate?
+		<br/>
+unsigned char (Player 2 Controller) <br/>
+unsigned char
+		(Player 3 Controller) <br/>
+unsigned char (Player 4 Controller)
+		<br/>
+unsigned char (Player 5 Controller) <br/>
+unsigned char
+		(Player 6 Controller) <br/>
+unsigned char (Player 7 Controller)
+		<br/>
+unsigned char (Player 8 Controller) <br/>
+unsigned char
+		(Player 9 Controller) <br/>
+unsigned char (Player 10 Controller)
+		<br/>
+unsigned char (Player 11 Controller) <br/>
+unsigned char
+		(Player 12 Controller) <br/>
+<br/>
+unsigned char (Player 1 Race)
+		<br/>
+unsigned char (Player 2 Race) <br/>
+unsigned char (Player 3
+		Race) <br/>
+unsigned char (Player 4 Race) <br/>
+unsigned char
+		(Player 5 Race) <br/>
+unsigned char (Player 6 Race) <br/>
+unsigned
+		char (Player 7 Race) <br/>
+unsigned char (Player 8 Race) <br/>
+unsigned
+		char (Player 9 Race) <br/>
+unsigned char (Player 10 Race) <br/>
+unsigned
+		char (Player 11 Race) <br/>
+unsigned char (Player 12 Race)
+		<br/>
+<br/>
+unsigned char (Player 1 Race) // not accurate?
+		<br/>
+unsigned char (Player 2 Race) <br/>
+unsigned char (Player 3
+		Race) <br/>
+unsigned char (Player 4 Race) <br/>
+unsigned char
+		(Player 5 Race) <br/>
+unsigned char (Player 6 Race) <br/>
+unsigned
+		char (Player 7 Race) <br/>
+unsigned char (Player 8 Race) <br/>
+<br/>
+unsigned
+		char (Player 1 Controller) <br/>
+unsigned char (Player 2
+		Controller) <br/>
+unsigned char (Player 3 Controller) <br/>
+unsigned
+		char (Player 4 Controller) <br/>
+unsigned char (Player 5
+		Controller) <br/>
+unsigned char (Player 6 Controller) <br/>
+unsigned
+		char (Player 7 Controller) <br/>
+unsigned char (Player 8
+		Controller) <br/>
+unsigned char (Player 9 Controller) <br/>
+unsigned
+		char (Player 10 Controller) <br/>
+unsigned char (Player 11
+		Controller) <br/>
+unsigned char (Player 12 Controller) <br/>
+<br/>
+unsigned
+		char (Player 1 owning Force) <br/>
+unsigned char (Player 2 owning
+		Force) <br/>
+unsigned char (Player 3 owning Force) <br/>
+unsigned
+		char (Player 4 owning Force) <br/>
+unsigned char (Player 5 owning
+		Force) <br/>
+unsigned char (Player 6 owning Force) <br/>
+unsigned
+		char (Player 7 owning Force) <br/>
+unsigned char (Player 8 owning
+		Force) <br/>
+unsigned char (Player 9 owning Force) <br/>
+unsigned
+		char (Player 10 owning Force) <br/>
+unsigned char (Player 11 owning
+		Force) <br/>
+unsigned char (Player 12 owning Force) <br/>
+<br/>
+8
+		bytes (unknown) </font>
+		</p>
+	</ul>
+	<p><br/>
+<font color="#000000">----------------------------------------------------
+	<br/>
+</font><font color="#ff55ff"><b>0x49 - </b></font><font color="#ff55ff">Information
+	Request </font>
+	</p>
+	<ul>
+		<p><font color="#ff55ff"><br/>
+unsigned long (Information Byte; 6 =
+		File Name, 7 = File Data ??) </font>
+		</p>
+	</ul>
+	<p><br/>
+<font color="#000000">----------------------------------------------------
+	<br/>
+</font><font color="#000000"><b>0x48 - </b></font><font color="#000000">Unknown
+	</font>
+	</p>
+	<ul>
+		<p><br/>
+unsigned long (Unknown) <br/>
+unsigned char (Unknown
+		[player related]) <br/>
+unsigned char (Unknown [player related])
+		<br/>
+unsigned char (Unknown [player related]) <br/>
+unsigned char
+		(Unknown [player related]) <br/>
+unsigned char (Unknown [player
+		related]) <br/>
+unsigned char (Unknown [player related]) <br/>
+unsigned
+		char (Unknown [player related]) <br/>
+unsigned char (Unknown
+		[player related]) 
+		</p>
+	</ul>
+	<p><br/>
+---------------------------------------------------- <br/>
+<b>0x47
+	- </b><br/>
+<b>0x46 -
+	</b><br/>
+<br/>
+----------------------------------------------------
+	<br/>
+<b>0x45 - </b>Unknown 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (slot #) <br/>
+unsigned char (?) 
+		</p>
+	</ul>
+	<p><br/>
+---------------------------------------------------- <br/>
+<b>0x44
+	- </b>Slot Change 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (slot #) <br/>
+unsigned char (owner
+		[parameter undefined]) 
+		</p>
+	</ul>
+	<p><br/>
+---------------------------------------------------- <br/>
+<br/>
+<b>0x43
+	- </b><br/>
+<b>0x42 -
+	</b><br/>
+<br/>
+----------------------------------------------------
+	<br/>
+<b>0x41 - </b>Race Change 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (slot #) <br/>
+unsigned char (race [see
+		<a href="http://www.maplantis.org/index.php?wiki=35"><font color="#0000ff"><u>scenario.chk
+		format</u></font></a>]) 
+		</p>
+	</ul>
+	<p><br/>
+---------------------------------------------------- <br/>
+<b>0x40
+	- </b>Unknown 
+	</p>
+	<ul>
+		<p><br/>
+17 bytes (unknown) 
+		</p>
+	</ul>
+	<p><br/>
+---------------------------------------------------- <br/>
+<b>0x3F
+	- </b>Unknown (Confirmation?) 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (player ID?) <br/>
+unsigned short (Null)
+		<br/>
+Unsigned short (01 00) <br/>
+unsigned short (05 00) 
+		</p>
+	</ul>
+	<p><br/>
+---------------------------------------------------- <br/>
+<b>0x3E
+	- </b>Game Slot Modification 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (Slot #) <br/>
+unsigned char (Player ID)
+		<br/>
+unsigned char (Player Owner [see <a href="http://www.maplantis.org/index.php?wiki=35"><font color="#0000ff"><u>scenario.chk
+		format</u></font></a>]) <br/>
+unsigned char (Race ID [see
+		<a href="http://www.maplantis.org/index.php?wiki=35"><font color="#0000ff"><u>scenario.chk
+		format</u></font></a>]) <br/>
+unsigned char (Force #; 0=none, 1-4) 
+		</p>
+	</ul>
+	<p><br/>
+---------------------------------------------------- <br/>
+<b>0x3D
+	- </b>Map Download % 
+	</p>
+	<ul>
+		<p><br/>
+signed char (percentage) 
+		</p>
+	</ul>
+	<p><br/>
+---------------------------------------------------- <br/>
+<b>0x3C
+	- </b>Start Game 
+	</p>
+	<ul>
+		<p><br/>
+No parameters. 
+		</p>
+	</ul>
+	<p><br/>
+---------------------------------------------------- <br/>
+<b>0x3B
+	- </b><br/>
+<b>0x3A - </b><br/>
+<br/>
+<b>0x39 - </b><br/>
+<b>0x38 -
+	</b><br/>
+---------------------------------------------------- <br/>
+<b>0x37
+	- </b>Game Hash Check (determines syncronized gameplay) 
+	</p>
+	<ul>
+		<p><br/>
+6 bytes - Unknown 
+		</p>
+	</ul>
+	<p><br/>
+0x47D050
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x36
+	- </b>Stim 
+	</p>
+	<ul>
+		<p><br/>
+No params. 
+		</p>
+	</ul>
+	<p><br/>
+0x4234C0 <br/>
+Referenced in: 0x4BF930
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x35
+	- </b>Building Morph 
+	</p>
+	<ul>
+		<p><br/>
+unsigned short (Unit ID [<a href="http://www.maplantis.org/index.php?wiki=101"><font color="#0000ff"><u>Units.dat
+		entry listing</u></font></a>]) 
+		</p>
+	</ul>
+	<p><br/>
+0x423850 <br/>
+Referenced in: 4BFAF0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x34
+	- </b>Cancel Addon 
+	</p>
+	<ul>
+		<p><br/>
+No params. 
+		</p>
+	</ul>
+	<p><br/>
+Used in: 0x4232C0 <br/>
+Referenced in: 0x4BFC20
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x33
+	- </b>Cancel Upgrade 
+	</p>
+	<ul>
+		<p><br/>
+No params. 
+		</p>
+	</ul>
+	<p><br/>
+0x4232E0 <br/>
+0x4BFCB0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x32
+	- </b>Upgrade 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (Upgrade ID[<a href="http://www.maplantis.org/index.php?wiki=103"><font color="#0000ff"><u>Upgrades.dat
+		Entry Listing</u></font></a>]) 
+		</p>
+	</ul>
+	<p><br/>
+0x423300 <br/>
+0x4BFCD0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x31
+	- </b>Cancel Research 
+	</p>
+	<ul>
+		<p><br/>
+No params. 
+		</p>
+	</ul>
+	<p><br/>
+0x423320 <br/>
+0x4BFD40
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x30
+	- </b>Research 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (Tech ID[<a href="http://www.maplantis.org/index.php?wiki=102"><font color="#0000ff"><u>Techdata.dat
+		Entry Listing</u></font></a>]) 
+		</p>
+	</ul>
+	<p><br/>
+0x423340 <br/>
+0x4BFD60
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x2F
+	- </b>Lift 
+	</p>
+	<ul>
+		<p><br/>
+signed short (x) <br/>
+signed short (y) 
+		</p>
+	</ul>
+	<p><br/>
+Used in: 0x423220 <br/>
+Referenced in: 0x4BFF30
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x2E
+	- </b>Cancel Nuke 
+	</p>
+	<ul>
+		<p><br/>
+No params. 
+		</p>
+	</ul>
+	<p><br/>
+Used in: 0x4231C0 <br/>
+Referenced in: 4BF9B0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x2D
+	- </b>Unburrow 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (0=instant, 1=shiftqueue) (unused) 
+		</p>
+	</ul>
+	<p><br/>
+Used in: 0x423280 <br/>
+Referenced in: 0x4BFB70
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x2C
+	- </b>Burrow 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (0=instant, 1=shiftqueue) (unused) 
+		</p>
+	</ul>
+	<p><br/>
+Used in: 0x4232A0 <br/>
+Referenced in: 0x4BFB90
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x2B
+	- </b>Hold Position 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (0=instant, 1=shiftqueue) 
+		</p>
+	</ul>
+	<p><br/>
+0x423360 <br/>
+0x4BFEB0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x2A
+	- </b>Merge Archon 
+	</p>
+	<ul>
+		<p><br/>
+No params. 
+		</p>
+	</ul>
+	<p><br/>
+Referenced in: 0x423200 <br/>
+Referenced in: 0x4BF9F0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x29
+	- </b>Unload 
+	</p>
+	<ul>
+		<p><br/>
+unsigned short (Unit ID?? [memory]) 
+		</p>
+	</ul>
+	<p><br/>
+0x4BFA30
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x28
+	- </b>Unload All 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (0=instant, 1=shiftqueue) 
+		</p>
+	</ul>
+	<p><br/>
+0x423AF0 <br/>
+0x4BFA90
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x27
+	- </b>Build Subunit(Interceptor/Scarab) 
+	</p>
+	<ul>
+		<p><br/>
+No params. 
+		</p>
+	</ul>
+	<p><br/>
+0x423380 <br/>
+Referenced in: 0x4BFA10
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x26
+	- </b>Siege 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (0=instant, 1=shiftqueue) (unused) 
+		</p>
+	</ul>
+	<p><br/>
+0x423440 <br/>
+Referenced in: 0x4BFAB0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x25
+	- </b>Unsiege 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (0=instant, 1=shiftqueue) (unused) 
+		</p>
+	</ul>
+	<p><br/>
+0x423460 <br/>
+Referenced in: 0x4BFAD0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x24
+	- </b>??? 
+	</p>
+	<ul>
+		<p><br/>
+Params unknown 
+		</p>
+	</ul>
+	<p><br/>
+---------------------------------------------------- <br/>
+<b>0x23
+	- </b>Unit Morph 
+	</p>
+	<ul>
+		<p><br/>
+unsigned short (Unit ID [<a href="http://www.maplantis.org/index.php?wiki=101"><font color="#0000ff"><u>Units.dat
+		entry listing</u></font></a>]); 
+		</p>
+	</ul>
+	<p><br/>
+Used in: 0x423780 <br/>
+Referenced in: 0x4BFB10
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x22
+	- </b>Decloak 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (0=instant, 1=shiftqueue) (unused) 
+		</p>
+	</ul>
+	<p><br/>
+Used in: 0x423260 <br/>
+Referenced in: 0x4BFB30
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x21
+	- </b>Cloak 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (0=instant, 1=shiftqueue) (unused) 
+		</p>
+	</ul>
+	<p><br/>
+Used in: 0x423720 <br/>
+Referenced in: 0x4BFB50
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x20
+	- </b>Cancel Train 
+	</p>
+	<ul>
+		<p><br/>
+unsigned short (Unit ID [<a href="http://www.maplantis.org/index.php?wiki=101"><font color="#0000ff"><u>Units.dat
+		entry listing</u></font></a>]); 
+		</p>
+	</ul>
+	<p><br/>
+Cancel Last: 0x423480 <br/>
+0x4BFE10
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x1F
+	- </b>Train 
+	</p>
+	<ul>
+		<p><br/>
+unsigned short (Unit ID [<a href="http://www.maplantis.org/index.php?wiki=101"><font color="#0000ff"><u>Units.dat
+		entry listing</u></font></a>]); 
+		</p>
+	</ul>
+	<p><br/>
+0x4234A0 <br/>
+0x4BFE30
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x1E
+	- </b>Return Cargo 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (0=instant, 1=shiftqueue) 
+		</p>
+	</ul>
+	<p><br/>
+Used in: 0x423750 <br/>
+Referenced in: 0x4BFE50
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x1D
+	- </b>&quot;Nothing&quot; ? 
+	</p>
+	<ul>
+		<p><br/>
+No params. 
+		</p>
+	</ul>
+	<p><br/>
+---------------------------------------------------- <br/>
+<b>0x1C
+	- </b>Reaver Stop 
+	</p>
+	<ul>
+		<p><br/>
+No params 
+		</p>
+	</ul>
+	<p><br/>
+0x4233A0 <br/>
+0x4BFE70
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x1B
+	- </b>Carrier Stop 
+	</p>
+	<ul>
+		<p><br/>
+No params 
+		</p>
+	</ul>
+	<p><br/>
+0x4233C0 <br/>
+0x4BFE90
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x1A
+	- </b>Stop 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (0=instant, 1=shiftqueue) 
+		</p>
+	</ul>
+	<p><br/>
+0x4233E0 <br/>
+0x4BFED0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x19
+	- </b>Cancel Unit Morph 
+	</p>
+	<ul>
+		<p><br/>
+No params. 
+		</p>
+	</ul>
+	<p><br/>
+0x423400 <br/>
+0x4BFEF0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x18
+	- </b>Cancel Construction 
+	</p>
+	<ul>
+		<p><br/>
+No params. 
+		</p>
+	</ul>
+	<p><br/>
+0x423420 <br/>
+0x4BFF10
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x17
+	- </b><br/>
+<b>0x16 -
+	</b><br/>
+<br/>
+----------------------------------------------------
+	<br/>
+<b>0x15 - </b>Target Command 
+	</p>
+	<ul>
+		<p><br/>
+signed short (x) <br/>
+signed short (y) <br/>
+unsigned
+		short (unit ID[memory]) (visible) <br/>
+unsigned short (unit
+		ID[<a href="http://www.maplantis.org/index.php?wiki=101"><font color="#0000ff"><u>Units.dat
+		entry listing</u></font></a>]) (only if memory ID is unused(0),
+		otherwise set to none) <br/>
+unsigned char (Command [<a href="http://www.maplantis.org/index.php?wiki=104"><font color="#0000ff"><u>Orders.dat
+		Entry Listing</u></font></a>]) <br/>
+unsigned char (0=Instant,
+		1=ShiftQueue) 
+		</p>
+	</ul>
+	<p><br/>
+Used in: 0x4BFF70
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x14
+	- </b>Right Click 
+	</p>
+	<ul>
+		<p><br/>
+signed short (x); <br/>
+signed short (y); <br/>
+unsigned
+		short (Unit ID[memory]); <br/>
+unsigned short (unit ID[<a href="http://www.maplantis.org/index.php?wiki=101"><font color="#0000ff"><u>Units.dat
+		entry listing</u></font></a>]) (only if memory ID is unused(0),
+		otherwise set to none) <br/>
+unsigned char (0=instant,
+		1=shiftqueue) 
+		</p>
+	</ul>
+	<p><br/>
+Used in: 0x4BFFF0 <br/>
+Referenced in: 0x456390
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x13
+	- </b>Hotkey 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (Slot 0-9) <br/>
+unsigned char (Player 0-7) 
+		</p>
+	</ul>
+	<p><br/>
+0x484400 <br/>
+0x4C0420
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x12
+	- </b>Use Cheat 
+	</p>
+	<ul>
+		<p><br/>
+Unsigned long (Cheat code flags). 
+		</p>
+	</ul>
+	<p><br/>
+0x4C0070
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x11
+	- </b>Resume Game 
+	</p>
+	<ul>
+		<p><br/>
+No parameters. 
+		</p>
+	</ul>
+	<p><br/>
+0x4C0090
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x10
+	- </b>Pause Game 
+	</p>
+	<ul>
+		<p><br/>
+No parameters. 
+		</p>
+	</ul>
+	<p><br/>
+0x4C00C0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x0F
+	- </b>Change Game Speed 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (speed; 0=Slowest, 6=Fastest) 
+		</p>
+	</ul>
+	<p><br/>
+0x4628F0 <br/>
+0x4C00F0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x0E
+	- </b>Ally 
+	</p>
+	<ul>
+		<p><br/>
+unsigned long (flags) 
+		</p>
+	</ul>
+	<p><br/>
+0x490C80 <br/>
+0x4C0120
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x0D
+	- </b>Vision 
+	</p>
+	<ul>
+		<p><br/>
+unsigned short (flags) 
+		</p>
+	</ul>
+	<p><br/>
+0x490C80 <br/>
+0x4C01B0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x0C
+	- </b>Build 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (Command [<a href="http://www.maplantis.org/index.php?wiki=104"><font color="#0000ff"><u>Orders.dat
+		Entry Listing</u></font></a>]) <br/>
+signed short (x [tile])
+		<br/>
+signed short (y [tile]) <br/>
+unsigned short (Unit ID
+		[<a href="http://www.maplantis.org/index.php?wiki=101"><font color="#0000ff"><u>Units.dat
+		entry listing</u></font></a>]) 
+		</p>
+	</ul>
+	<p><br/>
+0x48E270 <br/>
+0x4C01D0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x0B
+	- </b>Shift Deselect 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (#of Units) <br/>
+unsigned short (Unit
+		ID[memory]) 
+		</p>
+	</ul>
+	<p><br/>
+0x4C04D0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x0A
+	- </b>Shift Select 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (#of Units) <br/>
+unsigned short (Unit
+		ID[memory]) 
+		</p>
+	</ul>
+	<p><br/>
+0x4C04D0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x09
+	- </b>Select 
+	</p>
+	<ul>
+		<p><br/>
+unsigned char (#of Units) <br/>
+unsigned short (Unit
+		ID[memory]) 
+		</p>
+	</ul>
+	<p><br/>
+0x4C04D0
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x08
+	- </b>Restart Game? 
+	</p>
+	<ul>
+		<p><br/>
+No parameters. 
+		</p>
+	</ul>
+	<p><br/>
+0x4C0210 <br/>
+0x4C9180
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x07
+	- </b>Load Game 
+	</p>
+	<ul>
+		<p><br/>
+unsigned long (unknown) <br/>
+string 
+		</p>
+	</ul>
+	<p><br/>
+Referenced in: 0x461840, 0x4618F0, 0x4C0230
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x06
+	- </b>Save Game 
+	</p>
+	<ul>
+		<p><br/>
+unsigned long (unknown) <br/>
+string 
+		</p>
+	</ul>
+	<p><br/>
+0x4C0270
+	<br/>
+---------------------------------------------------- <br/>
+<b>0x05
+	- </b>Keep Alive 
+	</p>
+	<ul>
+		<p><br/>
+No parameters. 
+		</p>
+	</ul>
+	<p><br/>
+---------------------------------------------------- <br/>
+<b>0x04
+	- </b><br/>
+<br/>
+----------------------------------------------------
+	<br/>
+<b>0x03 - </b>Unknown 
+	</p>
+	<ul>
+		<p><br/>
+No parameters. 
+		</p>
+	</ul>
+	<p><br/>
+---------------------------------------------------- <br/>
+<b>0x02
+	- </b><br/>
+<br/>
+----------------------------------------------------
+	<br/>
+<b>0x01 - </b>Claim Host ? 
+	</p>
+	<ul>
+		<p><br/>
+No parameters. 
+		</p>
+	</ul>
+	<p><br/>
+---------------------------------------------------- <br/>
+<font color="#ff55ff"><b>0x00
+	- </b></font><font color="#ff55ff">Game Chat </font>
+	</p>
+	<ul>
+		<p><font color="#ff55ff"><br/>
+unsigned char (unknown) <br/>
+string
+		(message) </font>
+		</p>
+	</ul>
+	<p><br/>
+<font color="#000000">----------------------------------------------------
+	<br/>
+</font><br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm"><a name="wiki_3"></a>Packet Header</p>
+	<p><br/>
+<br/>
+
+	</p>
+	<ul>
+		<p><br/>
+unsigned long udptype (0x00) <br/>
+unsigned short checksum
+		<br/>
+unsigned short packet length <br/>
+unsigned short Sent
+		packets to player (seq1) <br/>
+unsigned short Recieved packets from
+		player (seq2) <br/>
+unsigned char Command Class <br/>
+unsigned char
+		Command ID (0x00) <br/>
+unsigned char Player ID <br/>
+unsigned char
+		Resend <br/>
+...Packet Data... 
+		</p>
+	</ul>
+	<p><br/>
+<i>The command opcode is not stored in the Command ID of
+	the packet, but rather in the data, where many commands may stack.
+	<br/>
+Entries in standard text indicate that the opcode is Command
+	Class 2. <br/>
+Entries in </i><font color="#ff55ff"><i>purple text</i></font><i>
+	indicate that the opcode is Command Class 1.</i> <br/>
+<br/>
+<br/>
+
+	</p>
+	<p style="margin-bottom: 0cm"><a name="wiki_4"></a>Replay Header</p>
+	<p><br/>
+<br/>
+
+	</p>
+	<ul>
+		<p><br/>
+unsigned long time (Game Ticks * 255??) <br/>
+unsigned
+		char unk (Game Ticks??) <br/>
+<br/>
+unsigned char Player ID
+		<br/>
+unsigned char Command ID <br/>
+...Command Variables... 
+		</p>
+	</ul>
+</div>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+</body>
+</html>
