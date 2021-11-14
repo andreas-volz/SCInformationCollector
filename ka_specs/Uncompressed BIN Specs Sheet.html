@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.4.7.2 (Linux)"/>
+	<meta name="author" content="Andreas Volz"/>
+	<meta name="created" content="2021-11-14T21:31:56.269390948"/>
+	<meta name="changedby" content="Andreas Volz"/>
+	<meta name="changed" content="2021-11-14T21:32:32.293993997"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		p { margin-bottom: 0.25cm; line-height: 115%; background: transparent }
+		h1 { margin-bottom: 0.21cm; background: transparent; page-break-after: avoid }
+		h1.western { font-family: "Liberation Serif", serif; font-size: 24pt; font-weight: bold }
+		h1.cjk { font-family: "Noto Serif CJK SC"; font-size: 24pt; font-weight: bold }
+		h1.ctl { font-family: "Lohit Devanagari"; font-size: 24pt; font-weight: bold }
+		h3 { margin-top: 0.25cm; margin-bottom: 0.21cm; background: transparent; page-break-after: avoid }
+		h3.western { font-family: "Liberation Serif", serif; font-size: 14pt; font-weight: bold }
+		h3.cjk { font-family: "Noto Serif CJK SC"; font-size: 14pt; font-weight: bold }
+		h3.ctl { font-family: "Lohit Devanagari"; font-size: 14pt; font-weight: bold }
+		td p { background: transparent }
+		a:link { color: #000080; so-language: zxx; text-decoration: underline }
+	</style>
+</head>
+<body lang="de-DE" link="#000080" vlink="#800000" dir="ltr"><h1 class="western">
+<u>Uncompressed BIN Specs Sheet </u>
+</h1>
+<p><b>Written by King Arthur</b><br/>
+- All offsets are Decimal,
+Little Endian, and INCLUSIVE unless otherwise specified.<br/>
+- These
+specs do <b>NOT</b> apply to the AISCRIPT.BIN and ISCRIPT.BIN files.</p>
+<h3 class="western">Uncompressed BIN Sections:</h3>
+<table cellpadding="5" cellspacing="0">
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.14cm"><p>
+			<a href="http://web.archive.org/web/19991008221503/http://camelot.warzone.com/formats/BINForm.htm#area">Area
+			Data</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/19991008221503/http://camelot.warzone.com/formats/BINForm.htm#strings">Strings</a></p>
+		</td>
+	</tr>
+</table>
+<p><br/>
+<br/>
+
+</p>
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.06cm"><p>
+			<u><b>Section</b></u></p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.06cm"><p>
+			<u><b>Default Content</b></u></p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.06cm"><p>
+			<u><b>Variable type</b></u></p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.06cm"><p>
+			<u><b>Comments</b></u></p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Area Data (Repeated
+			for # of Areas) - 86 Bytes / Area</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Offset Pointer to Next Area</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			N/A</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Long</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			If the first or last bin group, always 0.</p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Area Start X-Coordinate</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			N/A</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Integer</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Area Start Y-Coordinate</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			N/A</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Integer</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Area End X-Coordinate</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			N/A</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Integer</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Area End Y-Coordinate</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			N/A</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Integer</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Area Width</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			N/A</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Integer</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Area Height</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Integer</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Unknown</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			0000</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Long</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Area Contents</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			N/A</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Integer</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Offset to a location in the File. Often points to a filename in
+			the MPQ archive, or a constant that Blizzard uses internally.</p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Unknown</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			N/A</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			32 Bytes</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Area #2 Width</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			N/A</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Integer</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Area #2 Height</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			N/A</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Integer</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Unknown</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			N/A</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			3 Longs</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Area #2 Contents</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			N/A</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Integer</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Offset to a location in the File. Often points to a
+			control-character delimited string.</p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Unknown</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			N/A</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			18 Bytes</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Unknown</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Unknown</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			N/A</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			86 Bytes</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Always the last section that looks like an Area, but it is not
+			pointed to by the next to the last offset pointer. Instead, this
+			group of 86 bytes appears to provide a looping structure, cycling
+			back and forth between addresses in the file.</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>String List</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			String</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			N/A</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			String</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Can be either a filename or a control-character delimited string,
+			or a Starcraft internal Constant.</p>
+		</td>
+	</tr>
+</table>
+<p><br/>
+<br/>
+<br/>
+
+</p>
+<hr/>
+
+<p><font size="2" style="font-size: 10pt">Copyright (©) Camelot
+Systems, Inc. 1998.</font></p>
+</body>
+</html>

@@ -1,0 +1,652 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.4.7.2 (Linux)"/>
+	<meta name="author" content="Andreas Volz"/>
+	<meta name="created" content="2021-11-14T21:28:25.774120929"/>
+	<meta name="changedby" content="Andreas Volz"/>
+	<meta name="changed" content="2021-11-14T21:29:05.795872472"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		p { margin-bottom: 0.25cm; line-height: 115%; background: transparent }
+		h1 { margin-bottom: 0.21cm; background: transparent; page-break-after: avoid }
+		h1.western { font-family: "Liberation Serif", serif; font-size: 24pt; font-weight: bold }
+		h1.cjk { font-family: "Noto Serif CJK SC"; font-size: 24pt; font-weight: bold }
+		h1.ctl { font-family: "Lohit Devanagari"; font-size: 24pt; font-weight: bold }
+		h3 { margin-top: 0.25cm; margin-bottom: 0.21cm; background: transparent; page-break-after: avoid }
+		h3.western { font-family: "Liberation Serif", serif; font-size: 14pt; font-weight: bold }
+		h3.cjk { font-family: "Noto Serif CJK SC"; font-size: 14pt; font-weight: bold }
+		h3.ctl { font-family: "Lohit Devanagari"; font-size: 14pt; font-weight: bold }
+		td p { background: transparent }
+		a:link { color: #000080; so-language: zxx; text-decoration: underline }
+	</style>
+</head>
+<body lang="de-DE" link="#000080" vlink="#800000" dir="ltr"><h1 class="western">
+<u>Uncompressed Weapon (DAT) Specs Sheet </u>
+</h1>
+<p><b>Written by King Arthur and Moneran</b><br/>
+- All offsets are
+Decimal, Little Endian, and INCLUSIVE unless otherwise specified.</p>
+<h3 class="western">Uncompressed DAT Sections:</h3>
+<table cellpadding="5" cellspacing="0">
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#label">Weapon
+			Label</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#sprite">Missile
+			Sprite</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#specialattack">Special
+			Attack</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#attacktype">Attack
+			Type</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#minrange">Minimum
+			Range</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#maxrange">Maximum
+			Range</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#upgradegroup">Upgrade
+			Group</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#weapontype">Weapon
+			Type</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#behavior">Weapon
+			Behavior</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#missiletype">Missile
+			Type</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#explosiontype">Explosion
+			Type</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#splashmin">Splash
+			Minimum</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#splashmed">Splash
+			Medium</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#splashmax">Splash
+			Maximum</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#damage">Default
+			Damage</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#bonus">Bonus</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#delay">Delay</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#factor">Factor</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#coords1">Coordinates
+			Group 1</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#coords2">Coordinates
+			Group 2</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#error">Error
+			Message</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#444400" style="background: #444400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.14cm; padding-left: 0.14cm; padding-right: 0.14cm"><p>
+			<a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/WEAPForm.htm#icon">Weapon
+			Icon</a></p>
+		</td>
+	</tr>
+</table>
+<p><br/>
+<br/>
+
+</p>
+<table cellpadding="2" cellspacing="0">
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.06cm"><p>
+			<u><b>Section</b></u></p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.06cm"><p>
+			<u><b>Length</b></u></p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.06cm"><p>
+			<u><b>Variable type</b></u></p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding: 0.06cm"><p>
+			<u><b>Comments</b></u></p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Weapon Label</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Weapon Label</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			200 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Integer / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			See <a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/labellist.htm">Label
+			List</a> for values.</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Missile Sprite</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Missile Sprite</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			400 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Long / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			See <a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/misslist.htm">Missile
+			Sprite List</a> for values.</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Special Attack</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Special Attack</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			100 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Byte / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			See <a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/spatlist.htm">Special
+			Attack List</a> for values.</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Attack Type</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Attack Type</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			200 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Integer / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 = Attacks Air only<br/>
+2 = Attacks Ground only<br/>
+3 = Attacks
+			Ground and Air<br/>
+4 = Units Only (No Buildings)<br/>
+18 = Ground
+			Units (No Hover) Only</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Minimum Range</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Minimum Range</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			400 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Long / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Maximum Range</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Maximum Range</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			400 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Long / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Upgrade Group</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Upgrade Group</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			100 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Byte / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			7 = Terran Infantry Weapons<br/>
+8 = Terran Vehicle Weapons<br/>
+9
+			= Terran Ship Weapons<br/>
+10 = Zerg Melee Attacks<br/>
+11 = Zerg
+			Missile Attacks<br/>
+12 = Zerg Flyer Attacks<br/>
+13 = Protoss
+			Ground Weapons<br/>
+14 = Protoss Air Weapons<br/>
+35 = Scarab<br/>
+45
+			= No upgrades</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Weapon Type</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Weapon Type</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			100 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Byte / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 = Explosive<br/>
+2 = Concussive<br/>
+3 = Normal</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Weapon Behavior</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Weapon Behavior</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			100</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Byte / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			0 = Flies to target<br/>
+1 = Seeks Target<br/>
+2 = Appears on
+			Target<br/>
+4 = Persistant Explosion<br/>
+5 = Wraps around
+			Target?<br/>
+6 = Suicide<br/>
+7 = Bounce</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Missile Type</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Missile Type</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			100 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Byte / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			30 = Homing Missile<br/>
+60 = Unknown<br/>
+255 = Normal</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Explosion Type</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Explosion Type</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			100 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Byte / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 = Normal<br/>
+2 = Normal<br/>
+3 = Normal<br/>
+4 = Lockdown<br/>
+5
+			= Unknown<br/>
+6 = Parasite<br/>
+7 = Spawn Broodlings<br/>
+8 = EMP
+			Shockwave (No gfx, just energy drain)<br/>
+9 = Irradiate<br/>
+10 =
+			Ensnare<br/>
+11 = Plague<br/>
+12 = Stasis<br/>
+13 = Dark Swarm<br/>
+14
+			= Normal<br/>
+15 = Normal</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Splash Minimum</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Splash Minimum</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			200 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Integer / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Minimum Splash Damage</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Splash Medium</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Splash Medium</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			200 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Integer / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Medium Splash Damage</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Splash Maximum</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Splash Maximum</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			200 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Integer / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Maximum Splash Damage</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Damage</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Damage</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			200 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Integer / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Bonus</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Bonus</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			200 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Integer / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Delay</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Delay</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			100 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Byte / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Factor</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Factor</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			100 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Byte / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Coordinate Group 1</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Coordinate Group 1</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			200 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			2 Bytes / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			X Coordinate (Byte)<br/>
+Y Coordinate (Byte)</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Coordinate Group 2</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Coordinate Group 2</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			200 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			2 Bytes / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			X Coordinate (Byte) Y Coordinate (Byte)</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Error Message</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Error Message</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			200 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Integer / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"></td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#004400" style="background: #004400" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			<font size="5" style="font-size: 18pt"><u><b>Weapon Icon</b></u></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#660000" style="background: #660000" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			Weapon Icon</p>
+		</td>
+		<td bgcolor="#000044" style="background: #000044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			200 Bytes</p>
+		</td>
+		<td bgcolor="#444444" style="background: #444444" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			1 Integer / Weapon</p>
+		</td>
+		<td bgcolor="#440044" style="background: #440044" style="border-top: none; border-bottom: 1px solid #808080; border-left: 1px solid #808080; border-right: 1px solid #808080; padding-top: 0cm; padding-bottom: 0.06cm; padding-left: 0.06cm; padding-right: 0.06cm"><p>
+			See <a href="http://web.archive.org/web/20000116115445/http://camelot.warzone.com/formats/iconlist.htm">Icon
+			List</a> for values.</p>
+		</td>
+	</tr>
+</table>
+<p><br/>
+<br/>
+<br/>
+
+</p>
+<hr/>
+
+<p><font size="2" style="font-size: 10pt">Copyright (©) Camelot
+Systems, Inc. 1998.</font></p>
+</body>
+</html>
