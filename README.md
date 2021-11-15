@@ -1,5 +1,5 @@
 #SCInformationCollection
-Find old (vintage) Information about St\*rc\*aft file format and mirror them here before they fade away!
+Find old (vintage) Information about St\*rcr\*ft file format and mirror them here before they fade away!
 
 ## whyask37SCmirrror
 This is an PDF export with google translation from https://m.blog.naver.com/whyask37.
