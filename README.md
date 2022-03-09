@@ -11,3 +11,5 @@ All credits for the hard work goes to this great developer!
 Mirror from: https://m.cafe.daum.net/rpgguild/KCa/244?listURI=%2Frpgguild%2FKCa
 
 https://m.cafe.daum.net/rpgguild/KCa?boardType=
+
+Converting GRP: https://m.cafe.daum.net/rpgguild/KCa/186
