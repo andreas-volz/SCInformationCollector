@@ -14,7 +14,7 @@ https://m.cafe.daum.net/rpgguild/KCa?boardType=
 
 Converting GRP: https://m.cafe.daum.net/rpgguild/KCa/186
 
-##EUDB
+## EUDB
 Don't know what this is, but contains lot of parameter information:
 
 http://farty1billion.dyndns.org/euddb/?pg=ref&a=onepage
